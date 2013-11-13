@@ -1,5 +1,5 @@
 class Voter < ActiveRecord::Base
-	validates :username, :email, presence: true
+	validates :username, :email, presence: true, uniqueness:true
 	validates :email, uniqueness: true
 	validates :email, email: true
 
